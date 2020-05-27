@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Password_Manager">
+
+    
+    
+    <!--#region import colors and fonts-->
+    
+    <ResourceDictionary.MergedDictionaries>
+        <!--Order is Important-->
+        <ResourceDictionary Source="Buttons.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="Colors.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="Fonts.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    <!--#endregion-->
+
+    
+    <!--#region Container-->
+
+    <Style BasedOn="{StaticResource hoverless}" x:Key="MailContainer" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="25,20,25,0"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border x:Name="BorderMail" Background="White" BorderBrush="{StaticResource Dark2PresetBrush}" BorderThickness="2.5">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Margin="12,8,8,8" CornerRadius="4" BorderThickness="2" BorderBrush="{StaticResource LineLightBrush}">
+                                <Image Name="Hallo" Margin="5" Width="50" Source="{Binding Path=Tag, RelativeSource={RelativeSource TemplatedParent}}"></Image>
+                            </Border>
+
+                            <StackPanel Margin="15,0,0,0" VerticalAlignment="Center">
+                                <TextBlock FontSize="20" Text="{TemplateBinding DataContext}"></TextBlock>
+                                <TextBlock FontSize="20" Foreground="{StaticResource TextGrayBrush}" Text="{TemplateBinding Content}"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true" SourceName="BorderMail">
+                            <Setter TargetName="BorderMail" Property="BorderBrush" Value="{StaticResource OrangePresetBrush}"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style> 
+
+
+</ResourceDictionary>

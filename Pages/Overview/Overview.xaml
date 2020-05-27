@@ -1,0 +1,185 @@
+﻿<Page x:Class="Password_Manager.Overview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Password_Manager"
+        mc:Ignorable="d"
+        d:DesignHeight="700" d:DesignWidth="700"
+        Title="Overview">
+
+    <Page.InputBindings>
+        <KeyBinding Key="r" Modifiers="Ctrl" Command="{Binding reloadPageCommand}"></KeyBinding>
+        <KeyBinding Key="n" Modifiers="Ctrl" Command="{Binding CreateNewAccountCommand}"></KeyBinding>
+        <KeyBinding Key="e" Modifiers="Ctrl" Command="{Binding EditCurrentAccountCommand}"></KeyBinding>
+        <KeyBinding Key="m" Modifiers="Ctrl" Command="{Binding CreateNewMailCommand}"></KeyBinding>
+        <KeyBinding Key="f" Modifiers="Ctrl" Command="{Binding targetSearchCommand}"></KeyBinding>
+        <KeyBinding Key="s" Modifiers="Ctrl" Command="{Binding targetSearchCommand}"></KeyBinding>
+    </Page.InputBindings>
+    
+    <Border>
+        <!-- Three Background Sections-->
+        <Grid x:Name="testBg">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!--1-->
+            <Border BorderThickness="1,1,0,1" BorderBrush="{StaticResource OrangePresetBrush}">
+                <Grid Background="{StaticResource Dark1PresetBrush}">
+                    <Grid.RowDefinitions>
+
+                        <!--Label and Button All-->
+                        <RowDefinition Height="160"></RowDefinition>
+
+                        <!--Database Buttons-->
+                        <RowDefinition Height="1*"></RowDefinition>
+
+                        <!--Add Mail Section-->
+                        <RowDefinition Height="80"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+
+                    <!--Row 1-->
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Style="{StaticResource MailHeader}">Konto:</TextBlock>
+                        <Button FontFamily="{StaticResource LatoThin}" Style="{StaticResource ButtonMail}" Click="Mail_All_Click">@All</Button>
+                    </StackPanel>
+
+
+                    <!--Row 2-->
+
+                    <ScrollViewer FlowDirection="RightToLeft" Grid.Row="1">
+                        <StackPanel x:Name="MailRoundButtons" VerticalAlignment="Top">
+
+                            <!-- Show Mails here -->
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <!-- Row 3-->
+                    <Border BorderThickness="0,2,0,0" BorderBrush="{StaticResource LineDarkBrush}" Grid.Row="2">
+                        <Button Style="{StaticResource AddButtonMail}" Command="{Binding CreateNewMailCommand}" x:Name="testClick"></Button>
+                    </Border>
+
+
+                </Grid>
+            </Border>
+
+            <!--2-->
+            <Border BorderThickness="0,1,0,1" BorderBrush="{StaticResource OrangePresetBrush}" Grid.Column="1" >
+                <Grid Background="{StaticResource Dark2PresetBrush}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBox Style="{StaticResource searchBar}" x:Name="searchBar" TextChanged="TextBox_TextChanged"></TextBox>
+                    </StackPanel>
+
+                    <!-- Mail container -->
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel x:Name="AccountContainer" VerticalAlignment="Top">
+
+                            <!-- Show Accounts here -->
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+
+                    <Border BorderThickness="0,2,0,0" BorderBrush="{StaticResource LineDarkBrush}" Grid.Row="2">
+                        <Button Style="{StaticResource AddButtonAccount}" x:Name="ButtonAddAccount" Command="{Binding CreateNewAccountCommand}"></Button>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!--3-->
+            <Border BorderThickness="0,1,1,1" BorderBrush="{StaticResource OrangePresetBrush}" Grid.Column="2" >
+                <Grid Background="{StaticResource Dark3PresetBrush}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <!--#region Row Content 3-->
+                    <Grid Grid.Row="0" Margin="30,60,30,40" Visibility="Hidden" x:Name="AccountInformation">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="12"></ColumnDefinition>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="85"></RowDefinition>
+                            <RowDefinition Height="60"></RowDefinition>
+                            <RowDefinition Height="60"></RowDefinition>
+                            <RowDefinition Height="60"></RowDefinition>
+                            <RowDefinition Height="150"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <!--_______________-->
+                        <Border BorderThickness="0,0,0,2" BorderBrush="White" Grid.Row="0" Grid.ColumnSpan="4"></Border>
+
+                        <Border CornerRadius="5" Background="white" HorizontalAlignment="Right" Height="75" Width="75" Margin="0,0,15,10">
+                            <Button Style="{StaticResource hoverless}" Click="Mail_Copy_Click">
+                                <Image x:Name="iconAnswer" Margin="5" Width="64" Source="E:\OneDrive\Programmierung Privat\07_WPF\1.0.0 PasswordManager\Resources\Images\CompanyIcon\Amazon.png"></Image>
+                            </Button>
+                        </Border>
+
+
+                        <Rectangle  Grid.Column="1" Grid.Row="0" Style="{StaticResource BorderPanelFirst}"></Rectangle>
+
+                        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="0" Style="{StaticResource PanelTextHeader}" x:Name="nameAnswer">GOOGLE</TextBlock>
+                        <!--_______________-->
+
+
+                        <!--_______________-->
+                        <Border BorderThickness="0,0,0,2" BorderBrush="White" Grid.Row="1" Grid.ColumnSpan="4"></Border>
+                        <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource PanelTextblock}">Username</TextBlock>
+                        <Rectangle Grid.Column="1" Grid.Row="1" Style="{StaticResource BorderPanel}"></Rectangle>
+                        <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource PanelTextbox}" x:Name="usernameAnswer">mussweg</TextBox>
+                        <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource CopyButton}" Click="Username_Copy_Click"></Button>
+                        <!--_______________-->
+
+
+                        <!--_______________-->
+                        <Border BorderThickness="0,0,0,2" BorderBrush="White" Grid.Row="2" Grid.ColumnSpan="4"></Border>
+                        <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource PanelTextblock}">Password</TextBlock>
+                        <Rectangle Grid.Column="1" Grid.Row="2" Style="{StaticResource BorderPanel}"></Rectangle>
+                        <TextBox Grid.Column="2" Grid.Row="2" Style="{StaticResource PanelTextbox}">*************</TextBox>
+                        <Button Grid.Column="3" Grid.Row="2" Style="{StaticResource CopyButton}" Click="Password_Copy_Click"></Button>
+                        <!--_______________-->
+
+
+                        <!--_______________-->
+                        <Border BorderThickness="0,0,0,2" BorderBrush="White" Grid.Row="3" Grid.ColumnSpan="4"></Border>
+                        <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource PanelTextblock}">Website</TextBlock>
+                        <Rectangle Grid.Column="1" Grid.Row="3" Style="{StaticResource BorderPanel}"></Rectangle>
+                        <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource PanelTextbox}" x:Name="websiteAnswer">www.google.de</TextBox>
+                        <Button Grid.Column="3" Grid.Row="3" Style="{StaticResource CopyButton}" Click="Web_Copy_Click"></Button>
+                        <!--_______________-->
+
+                        <Border CornerRadius="5" Grid.ColumnSpan="4" Grid.Row="4" Background="White" Margin="20,30,20,0">
+                            <TextBox Style="{StaticResource PanelNotes}" x:Name="notesAnswer"></TextBox>
+                        </Border>
+
+
+                    </Grid>
+                    <!--#endregion-->
+                    <Border BorderThickness="0,2,0,0" BorderBrush="{StaticResource LineDarkBrush}" Grid.Row="2">
+                        <Button Style="{StaticResource EditButtonAccount}" x:Name="ButtonCreateAccount" Command="{Binding EditCurrentAccountCommand}"></Button>
+                    </Border>
+                </Grid>
+            </Border>
+
+        </Grid>
+
+    </Border>
+
+</Page>

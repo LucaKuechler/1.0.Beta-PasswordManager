@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Password_Manager">
+
+    
+    
+    <!--#region import colors and fonts-->
+    
+    <ResourceDictionary.MergedDictionaries>
+        <!--Order is Important-->
+        <ResourceDictionary Source="Colors.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="Fonts.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    <!--#endregion-->
+
+
+    <Style TargetType="{x:Type Rectangle}" x:Key="BorderPanel">
+        <Setter Property="Fill" Value="White" />
+        <Setter Property="Height" Value="60"></Setter>
+        <Setter Property="Margin" Value="5,8,5,8"></Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type Rectangle}" x:Key="BorderPanelFirst" BasedOn="{StaticResource BorderPanel}">
+        <Setter Property="Margin" Value="5,0,5,5"></Setter>
+    </Style>
+
+
+</ResourceDictionary>

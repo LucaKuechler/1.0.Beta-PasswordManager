@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Password_Manager">
+
+    <!--Orange-->
+    <Color x:Key="OrangePreset">#ff9e3d</Color>
+    <SolidColorBrush x:Key="OrangePresetBrush" Color="{StaticResource OrangePreset}"></SolidColorBrush>
+
+    <!--Black-->
+    <Color x:Key="BlackPreset">#000000</Color>
+    <SolidColorBrush x:Key="BlackPresetBrush" Color="{StaticResource BlackPreset}"></SolidColorBrush>
+
+    <!--Dark1-->
+    <Color x:Key="Dark1Preset">#1F1F1F</Color>
+    <SolidColorBrush x:Key="Dark1PresetBrush" Color="{StaticResource Dark1Preset}"></SolidColorBrush>
+
+    <!--Dark2-->
+    <Color x:Key="Dark2Preset">#262525</Color>
+    <SolidColorBrush x:Key="Dark2PresetBrush" Color="{StaticResource Dark2Preset}"></SolidColorBrush>
+
+    <!--Dark3-->
+    <Color x:Key="Dark3Preset">#313131</Color>
+    <SolidColorBrush x:Key="Dark3PresetBrush" Color="{StaticResource Dark3Preset}"></SolidColorBrush>
+
+    <!--LineLight-->
+    <Color x:Key="LineLight">#bcbcbc</Color>
+    <SolidColorBrush x:Key="LineLightBrush" Color="{StaticResource LineLight}"></SolidColorBrush>
+
+    <!--LineDark-->
+    <Color x:Key="LineDark">#403f3f</Color>
+    <SolidColorBrush x:Key="LineDarkBrush" Color="{StaticResource LineDark}"></SolidColorBrush>
+
+    <!--ExitRed-->
+    <Color x:Key="ExitRed">#f44336</Color>
+    <SolidColorBrush x:Key="ExitRedBrush" Color="{StaticResource ExitRed}"></SolidColorBrush>
+
+    <!--MinYellow-->
+    <Color x:Key="MinYellow">#f5c980</Color>
+    <SolidColorBrush x:Key="MinYellowBrush" Color="{StaticResource MinYellow}"></SolidColorBrush>
+
+    <!--TextGray-->
+    <Color x:Key="TextGray">#6e6e6e</Color>
+    <SolidColorBrush x:Key="TextGrayBrush" Color="{StaticResource TextGray}"></SolidColorBrush>
+
+    <!--TextGray-->
+    <Color x:Key="OkGreen">#5FA342</Color>
+    <SolidColorBrush x:Key="OkGreenBrush" Color="{StaticResource OkGreen}"></SolidColorBrush>
+    
+</ResourceDictionary>
