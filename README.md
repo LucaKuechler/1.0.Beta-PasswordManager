@@ -10,10 +10,10 @@ This is a simple, quick and easy to use password manager I have coded during cor
 ## Installation 
 
 1. download or clone the repository 
-2. in case you downloaded the file you need to unpack it by using something like [WinRAR](www.gooogle.de)
-3. grap the unpacked folder and move it to your favorite location   [⚠be aware of permissions⚠]
+2. in case you downloaded the file you need to unpack it by using something like [WinRAR](https://www.chip.de/downloads/WinRAR-64-Bit_37666786.html)
+3. grap the unpacked folder and move it to your favorite location[⚠be aware of permissions⚠]
 4. now enter and run the ”Password Manager.exe” file
-5. additionally you can send the exe file to your desktop or a other location to have easy access 
+5. additionally you can send the ".exe" file to your desktop or a other location to have easy access 
 
 ---
 
