@@ -9,11 +9,11 @@ This is a simple, quick and easy to use **"Password Manager"** I have coded duri
 
 ## Installation 
 
-1. Download or clone the repository 
-2. In case you downloaded the file you need to unpack it by using something like [WinRAR](https://www.chip.de/downloads/WinRAR-64-Bit_37666786.html)
-3. Grap the unpacked folder and move it to your favorite location[⚠be aware of permissions⚠]
-4. Now enter and run the ”Password Manager.exe” file
-5. Additionally you can send the ".exe" file to your desktop or a other location to have easy access 
+1. Download or clone the repository. 
+2. In case you downloaded the file you need to unpack it by using something like [WinRAR](https://www.chip.de/downloads/WinRAR-64-Bit_37666786.html).
+3. Grap the unpacked folder and move it to your favorite location[⚠be aware of permissions⚠].
+4. Now enter and run the ”Password Manager.exe” file.
+5. Additionally you can send the ".exe" file to your desktop or a other location to have easy access. 
 
 ---
 
