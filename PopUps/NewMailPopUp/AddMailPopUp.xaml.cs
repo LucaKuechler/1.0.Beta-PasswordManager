@@ -45,7 +45,7 @@ namespace Password_Manager
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if(!(ComboBoxMail.SelectedIndex == 0))
-                RemoveData.RemoveMailDB(PasswordManager, MainPage.ListMails, ComboBoxMail.SelectedIndex);
+                RemoveData.RemoveMailDB(PasswordManager, MainPage.ListMails, ComboBoxMail.SelectedIndex, MainPage);
                 this.Close();
         }
 

@@ -22,7 +22,7 @@ namespace Password_Manager
         }
 
 
-        public static void RemoveMailDB(Database PasswordManager, CreateDataList ListMails, int ElemCounter)
+        public static void RemoveMailDB(Database PasswordManager, CreateDataList ListMails, int ElemCounter, Overview mainPage)
         {
             string query = "DELETE FROM Mails WHERE Mail_ID=:id";
 
@@ -32,6 +32,33 @@ namespace Password_Manager
             editMail.ExecuteNonQuery();
 
             PasswordManager.CloseConnection();
+
+            fitAccounts(PasswordManager, ElemCounter, mainPage);
+        }
+
+
+        public static void fitAccounts(Database PasswordManager, int ElemCounter, Overview mainPage)
+        {
+            for(int i = 0; i < (mainPage.ListAccounts.Accounts.Length - 1); i++)
+            {
+                int curID = mainPage.ListAccounts.Accounts[i].Mail_ID; 
+
+                if(curID >= ElemCounter)
+                {
+                    string query = "UPDATE Accounts SET Mail_ID = :mail_ID where ID=:id";
+
+                    SQLiteCommand editMail = new SQLiteCommand(query, PasswordManager.mainConnection);
+                    PasswordManager.OpenConnection();
+                    editMail.Parameters.AddWithValue("iD", mainPage.ListAccounts.Accounts[i].RealID);
+                    editMail.Parameters.AddWithValue("mail_ID", (curID - 1));
+
+                    editMail.ExecuteNonQuery();
+
+                    PasswordManager.CloseConnection();
+                }
+                
+            }
+            
         }
     }
 }
