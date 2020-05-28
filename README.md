@@ -5,7 +5,7 @@
 ## General
 This is a simple, quick and easy to use **"Password Manager"** I have coded during corona crises. All common features are included. For example adding new mail addreses or new accounts. You can edit the accounts every time you want just by clicking the edit button. If you want to use a information just click on the brain button on the right to each element. It then will be copied to your clipboard and you can easily paste it on your chosen Login form. All your data is stored locally and will be backuped in a folder every time you close the app.
 
-<img src="GitHub/EditScreen.PNG" width="300" Height="200" Margin="5">
+<img src="GitHub/EditScreen.PNG" width="350" Height="200" Margin="5">
 
 
 ---
