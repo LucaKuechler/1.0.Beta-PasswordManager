@@ -58,8 +58,14 @@ This is a simple, quick and easy to use **"Password Manager"** I have coded duri
 
 | Key     | Function     |
 | :------------- | :------------- |
-| STRG + b  | reloads the page |
-| STRG + ENTER | add new account |
+| STRG + b  | goto: overview window|
+| STRG + ENTER | apply changes to current account |
+| STRG + d  | delete current account |
+| STRG + t | focus: name input |
+| STRG + u  | focus: username input |
+| STRG + p | focus: password input |
+| STRG + w  | focus: website input |
+| STRG + n | focus: notes input |
 
 ---
 ## Bugs
