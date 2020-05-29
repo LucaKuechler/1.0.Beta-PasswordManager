@@ -6,11 +6,11 @@ This is a simple, quick and easy to use **"Password Manager"** I have coded duri
 
 | Overview     | Mail     |
 | :------------- | :------------- |
-| <img src="GitHub/OverviewScreen.PNG" width="400" Height="250" Margin="10">       | <img src="GitHub/AddMail.PNG" width="400" Height="280" Margin="10">     |
+| <img src="GitHub/OverviewScreen.PNG" width="400" Height="260" Margin="10">       | <img src="GitHub/AddMail.PNG" width="400" Height="260" Margin="10">     |
 
 | Create     | Edit     |
 | :------------- | :------------- |
-| <img src="GitHub/CreateScreen.PNG" width="400" Height="250" Margin="10">       | <img src="GitHub/EditScreen.PNG" width="400" Height="280" Margin="10">     |
+| <img src="GitHub/CreateScreen.PNG" width="400" Height="260" Margin="10">       | <img src="GitHub/EditScreen.PNG" width="400" Height="260" Margin="10">     |
 
 
 
